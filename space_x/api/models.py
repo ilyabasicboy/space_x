@@ -48,9 +48,7 @@ class Advantage(models.Model):
     )
     top_subtitle = models.CharField(
         verbose_name=u'подзаголовок сверху',
-        max_length=255,
-        blank=True,
-        null=True
+        max_length=255
     )
     title = models.CharField(
         verbose_name=u'основной заголовок',
@@ -58,15 +56,8 @@ class Advantage(models.Model):
     )
     bottom_subtitle = models.CharField(
         verbose_name=u'подзаголовок снизу',
-        max_length=255,
-        blank=True,
-        null=True
+        max_length=255
     )
 
     def __str__(self):
-        title = self.title
-        if self.top_subtitle:
-            title = self.top_subtitle + ' ' + title
-        if self.bottom_subtitle:
-            title += ' ' + self.bottom_subtitle
-        return title
+        return '%s %s %s' % (self.top_subtitle, self.title, self.bottom_subtitle)
