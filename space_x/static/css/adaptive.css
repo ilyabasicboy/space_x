@@ -1,0 +1,131 @@
+/* Medium screen */
+
+@media screen and (max-width: 1279px) {
+
+    .header__menu {
+        font-size: 14px;
+    }
+
+    .menu__item:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .section__title .title {
+        font-size: 42px;
+    }
+
+    .section__title .subtitle {
+        font-size: 18px;
+    }
+
+    .section__advantages-list {
+        display: grid;
+        grid-template-columns: 150px 150px;
+    }
+
+    .advantage .title {
+        font-size: 42px;
+    }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1023px) {
+
+    .header {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .header__menu {
+        z-index: 3;
+        position: fixed;
+        left: 0;
+        top: 105px;
+        bottom: 0;
+        height: calc(100% - 80px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: translate3d(-100%, 0, 0);
+        overflow: hidden;
+        overflow-y: auto;
+        padding-left: 10px;
+    }
+
+    .header__menu-list {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .header__menu .menu__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .header__menu.anim--active {
+        transition: transform 0.7s ease-in-out;
+    }
+
+    .header__menu.active {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .section:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+
+    .section__block {
+        flex-direction: column;
+        justify-content: center:
+    }
+
+    .section__content {
+        margin-right: 0;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%
+    }
+
+    .start__travel {
+        margin-top: 0;
+        background: transparent;
+    }
+
+    .section__advantages {
+        margin-left: 0;
+        margin-top: 100px;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+
+    .section__content {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .start__travel {
+        margin-top: 50px;
+    }
+
+    .section__advantages {
+        width: auto;
+    }
+
+    .header__logo a {
+        padding: 33px 10px;
+    }
+}
